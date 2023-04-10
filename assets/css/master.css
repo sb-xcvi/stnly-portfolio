@@ -1,0 +1,411 @@
+/* ------------------------------------------------------------------------------
+	
+
+	1. CSS Reset
+	2. Document Setup
+	3. Header
+	    3.1 Navbar
+	4. Homepage
+        4.1 about me
+        4.2 skillset
+        4.3 experiences
+        4.4 education
+	5. About me page
+        5.1 
+	6. Portfolio page
+	7. Contact page
+	8. Footer
+	9. Responsive
+		
+		
+--------------------------------------------------------------------------------/*
+
+
+/*----------------------------------------------------
+ 	1 CSS Reset
+------------------------------------------------------*/
+
+:root {
+    --black: #000;
+    --body: #888089;
+    --body2: #f8f8f8;
+    --brown: #5b4c5c;
+    --darkGrey: #5d5d5d;
+    --lightGrey: #bab4bb;
+    --marineBlue: #1c2ed3;
+    --pinkish: #e88988;
+    --white: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+}
+
+body {
+    color: var(--body);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-font-smooting: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*----------------------------------------------------
+ 	2 Document setup
+------------------------------------------------------*/
+
+.wrapper {
+    width: 100%;
+}
+
+.spHeight {
+    padding-top: 63px;
+}
+
+.wrapper.noGap {
+    padding-top: 0px;
+}
+
+.noMar {
+    margin: 0px !important;
+}
+
+.noPadd {
+    padding: 0px !important;
+}
+
+.xPad {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+p {
+    font-size: 13px;
+    line-height: 27px;
+    font-weight: 400;
+    padding-bottom: 33px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: var(--black)
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 33px;
+    line-height: 76px;
+    font-weight: 400;
+    margin: 0px;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 29px;
+    color: #372d38;
+    line-height: 57px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 27px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    font-weight: 300;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    color: #372d38;
+    line-height: 24px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.wrapper .media {
+    margin-top: 0;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.heading .container {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.heading h2 {
+    font-size: 19px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.heading h2:after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 2px;
+    background: var(--brown);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+}
+
+.heading h3 {
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--brown);
+    padding-bottom: 0;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+
+.heading p {
+    line-height: 25px;
+}
+
+.topmar {
+    margin-top: 20px;
+}
+
+
+/*----------------------------------------------------
+ 	3.1 Navbar
+------------------------------------------------------*/
+
+.navbar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.navbar .container {
+    flex-direction: column;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.navbar .nav-link {
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+}
+
+#brand {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: solid 2px var(--black);
+    padding: 5px 15px 5px 15px;
+    letter-spacing: 5px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.active {
+    text-decoration: line-through solid 1.5px var(--darkGrey);
+}
+
+
+/*----------------------------------------------------
+ 	4 Homepage
+------------------------------------------------------*/
+
+
+/*  4.1 About me  */
+
+.aboutme {
+    background: var(--white);
+    text-align: left;
+}
+
+.aboutme .container {
+    padding-top: 80px;
+    padding-bottom: 47px;
+}
+
+.aboutme img {
+    padding: 7px;
+    display: block;
+    /* border: 1px solid var(--lightGrey); */
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.aboutme .heading p {
+    padding-bottom: 41px;
+}
+
+.aboutme h4 {
+    font-size: 16px;
+    color: var(--brown);
+    padding-bottom: 20px;
+}
+
+.aboutme .btn-primary {
+    border: 2px solid #746c75;
+    background: none;
+    line-height: 30px;
+    font-size: 12px;
+    color: #372d38;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0;
+}
+
+.aboutme .btn-primary:hover {
+    color: #979497;
+}
+
+
+/*  4.2 Skillset  */
+
+.skillset {
+    background: var(--body2);
+    display: table;
+    width: 100%;
+}
+
+.skillset .container {
+    padding-top: 66px;
+    padding-bottom: 64px;
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 53px;
+    width: 100%;
+    background: #e2e1e2;
+    height: 7px;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    position: absolute;
+    top: -27px;
+    left: 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 27px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--brown)
+}
+
+.skillbar-title span {
+    display: block;
+}
+
+.skillbar-bar {
+    height: 7px;
+    width: 0px;
+    background: var(--pinkish);
+}
+
+.skill-bar-percent {
+    position: absolute;
+    top: -24px;
+    font-size: 14px;
+    color: #796f7a;
+    text-align: end;
+    right: 0;
+}
+
+
+/*  4.3 Experience  */
+
+
+/*  4.4 Education  */
+
+
+/*----------------------------------------------------
+ 	5 About me page
+------------------------------------------------------*/
+
+
+/*----------------------------------------------------
+ 	6 Portfolio page
+------------------------------------------------------*/
+
+
+/*----------------------------------------------------
+ 	7 Contact page
+------------------------------------------------------*/
+
+
+/*----------------------------------------------------
+ 	8 Footer
+------------------------------------------------------*/
+
+
+/*----------------------------------------------------
+ 	9 Responsive
+------------------------------------------------------*/
