@@ -88,34 +88,35 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="row justify-content-between">
+                        <div class="row justify-content-between align-items-center">
                             <div class="col-md-6 col-sm-12 xPad">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae natus aut, laborum perferendis recusandae saepe cumque tempora a fugiat distinctio illum dicta temporibus animi adipisci error placeat quisquam nesciunt repudiandae. Lorem ipsum dolor, sit
-                                    amet consectetur adipisicing elit. Neque, molestias architecto obcaecati saepe esse voluptatum pariatur officiis vero earum fugiat iure dolore minima consectetur amet tempore, quasi suscipit eum nemo. Lorem ipsum dolor
-                                    sit amet consectetur, adipisicing elit. Explicabo mollitia unde dignissimos nesciunt, fugiat maiores assumenda laborum pariatur praesentium cumque cum excepturi dolorem, dolor quibusdam sapiente est ipsa animi molestias.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi culpa ea maiores magnam. Alias deleniti minima inventore dolores dolore non. Vitae, asperiores modi expedita non nam provident voluptatum ut id. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit. Voluptas reiciendis ratione officia atque culpa fugiat dolores, ipsum facere sunt recusandae hic, maiores necessitatibus vel harum error repellat doloremque magnam consequatur. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Debitis, tempore vero sint autem unde nesciunt, ipsa hic totam voluptatem officiis iusto at ab aspernatur voluptatum corporis tempora excepturi veritatis quae. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Obcaecati magnam voluptate natus enim, temporibus facere quo quos placeat, aut quaerat quod doloribus ex corrupti fugit rem, molestiae harum aliquam eveniet!
                                 </p>
                             </div>
                             <div class="col-md-6 col-sm-12 xPad">
                                 <div class="skillbar clearfix">
                                     <div class="skillbar-title"><span>Web design</span></div>
-                                    <div class="skillbar-bar" style="width: 86%;"></div>
-                                    <div class="skill-bar-percent">86%</div>
+                                    <div class="skillbar-bar" id="skillbar-bar1"></div>
+                                    <div class="skill-bar-percent" id="skill-bar-percent1"></div>
                                 </div>
                                 <div class="skillbar clearfix">
                                     <div class="skillbar-title"><span>Javascript</span></div>
-                                    <div class="skillbar-bar" style="width: 73%;"></div>
-                                    <div class="skill-bar-percent">73%</div>
+                                    <div class="skillbar-bar" id="skillbar-bar2"></div>
+                                    <div class="skill-bar-percent" id="skill-bar-percent2">73%</div>
                                 </div>
                                 <div class="skillbar clearfix">
                                     <div class="skillbar-title"><span>HTML / CSS</span></div>
-                                    <div class="skillbar-bar" style="width: 86%;"></div>
-                                    <div class="skill-bar-percent">86%</div>
+                                    <div class="skillbar-bar" id="skillbar-bar3"></div>
+                                    <div class="skill-bar-percent" id="skill-bar-percent3">86%</div>
                                 </div>
                                 <div class="skillbar clearfix">
                                     <div class="skillbar-title"><span>WordPress</span></div>
-                                    <div class="skillbar-bar" style="width: 91%;"></div>
-                                    <div class="skill-bar-percent">91%</div>
+                                    <div class="skillbar-bar" id="skillbar-bar4"></div>
+                                    <div class="skill-bar-percent" id="skill-bar-percent4">91%</div>
                                 </div>
                             </div>
                         </div>
@@ -126,21 +127,40 @@
         <!-- skillset | end -->
 
         <!-- experience | start -->
-        <section id="experience" class="myExperiences">
+        <section id="experience " class="myExperiences ">
 
         </section>
         <!-- experience | end -->
 
         <!-- education | start -->
-        <section id="education" class="myEducation">
+        <section id="education " class="myEducation ">
 
         </section>
         <!-- education | end -->
 
     </div>
+    <script>
+        function animateProgressBar(barId, percentId, value) {
+            let progressBar = document.getElementById(barId);
+            let progressPercent = document.getElementById(percentId);
+            let percent = 0;
+            let intervalId = setInterval(function() {
+                percent++;
+                progressBar.style.width = percent + "%";
+                progressPercent.innerHTML = percent + "%";
+                if (percent === value) {
+                    clearInterval(intervalId);
+                }
+            }, 10);
+        }
 
-    <script type="text/javascript" src="assets/vendor/js/bootstrap.min.js " />
-    <script type="text/javascript" src="assets/js/stnly.js" />
+        animateProgressBar("skillbar-bar1", "skill-bar-percent1", 80);
+        animateProgressBar("skillbar-bar2", "skill-bar-percent2", 50);
+        animateProgressBar("skillbar-bar3", "skill-bar-percent3", 20);
+        animateProgressBar("skillbar-bar4", "skill-bar-percent4", 50);
+    </script>
+    <script type="text/javascript " src="assets/vendor/js/bootstrap.min.js " />
+    <script type="text/javascript " src="assets/js/stnly.js " />
 
 </body>
 
